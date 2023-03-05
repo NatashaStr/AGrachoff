@@ -1,0 +1,70 @@
+
+.controls {
+  margin-right: 35px;
+}
+
+.filters__type .controls:nth-child(2n) {
+  margin-right: 20px;
+}
+
+.filters__rooms .controls {
+  margin-right: 64px;
+}
+
+.filters__rooms .controls:nth-child(3n) {
+  margin-right: 56px;
+}
+
+
+.controls:last-child {
+  margin-right: 0;
+}
+
+.controls__input {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.controls__label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.controls__input:focus + .controls__mark::after {
+  outline: rgb(59, 153, 252) auto 5px;
+
+}
+
+.controls__mark {
+  margin-right: 10px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: $color-medium-orchid;
+    display: none;
+  }
+}
+
+.controls__input:hover ~ .controls__mark::after,
+.controls__input:checked ~ .controls__mark::after {
+display: block;
+
+}
